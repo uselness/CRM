@@ -1,10 +1,17 @@
 import React from "react";
 import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { useHistory } from 'react-router-dom';
 
 function LoginForm () {
+  const history = useHistory();
   const onFinish = (values: any) => {
     console.log('Received values of form: ', values);
+    history.push(
+      '/index',
+      {
+        num: 1
+    });
   };
 
   return (
