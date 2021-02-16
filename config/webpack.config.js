@@ -422,6 +422,11 @@ module.exports = function (webpackEnv) {
                       },
                     },
                   ],
+                  ["import", {
+                    libraryName: "antd",
+                    libraryDirectory: "es",
+                    style: 'css' // `style: true` 会加载 less 文件
+                  }],
                   isEnvDevelopment &&
                     shouldUseReactRefresh &&
                     require.resolve('react-refresh/babel'),

@@ -1,8 +1,14 @@
 import React from "react";
+import ParticlesBg from "particles-bg"
+import "./style.less";
+import LoginForm from "./LoginForm";
 
 function Login () {
   return (
-    <div>login</div>
+    <React.Fragment>
+      <ParticlesBg type="cobweb" bg={true} />
+      <LoginForm/>
+    </React.Fragment>
   );
 }
 
