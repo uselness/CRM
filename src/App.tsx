@@ -1,14 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.less';
+import React from "react";
+import { Route, Switch, BrowserRouter } from "react-router-dom"
+import Login from "./components/Login";
+import Index from "./components/Index";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Index} />
+        <Route exact path="/login" component={Login}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
